@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Template</title>
+		<link rel="icon" type="image/png" href="favicon.png" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Зарегистрируйся</h1>
+			<!-- Form -->
+			<form id="form" novalidate>
+				<div class="form-group">
+					<label for="name">Ваше имя</label>
+					<input
+						type="text"
+						id="name"
+						placeholder="Иванов И. А."
+						required
+                        minlength="3" maxlength="100"
+                        name="name"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="phone">Номер телефона</label>
+					<input
+						type="tel"
+						id="phone"
+						placeholder="+7 (999) 999-00-00"
+						required
+                        pattern="\+?[0-9\s\-\(\)]+"
+                        name="phone"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="mail">Почтовый адрес</label>
+					<input
+						type="email"
+						id="mail"
+						placeholder="abc@mail.ru"
+						required
+                        name="email"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="website">Веб-сайт</label>
+					<input
+						type="url"
+						id="website"
+						placeholder="www.google.com"
+						required
+                        name="website"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="password1">Пароль</label>
+					<input
+						type="password"
+						id="password1"
+						placeholder="Создайте пароль (минимум 8 символов)"
+						required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                        title="Используйте хотя бы 1 заглавную букву, 1 строчную и 1 цифру"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="password2">Подтвердите пароль</label>
+					<input
+						type="password"
+						id="password2"
+						placeholder="Подтвердите пароль"
+						required
+                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                        name="password"
+					/>
+				</div>
+				<button type="submit">Зарегистрироваться</button>
+			</form>
+			<!-- Error/Success -->
+			<div class="message-container">
+				<h3 id="message">Заполните все поля</h3>
+			</div>
+		</div>
+		<!-- Script -->
+		<script src="script.js"></script>
+	</body>
+</html>
